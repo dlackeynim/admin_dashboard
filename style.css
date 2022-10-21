@@ -1,0 +1,20 @@
+body {
+    display: grid;
+    grid-template-rows: 200px 700px;
+}
+
+.nav {
+    border: 1px solid red;
+    grid-area: 1/1/6/1;
+}
+
+.header {
+    border: 1px solid blue;
+   grid-area: 1/2/1/6;
+}
+
+.body_container {
+    border: 1px solid green;
+    grid-area: 2/2/6/6;
+}
+
