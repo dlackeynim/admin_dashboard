@@ -7,33 +7,89 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
       rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Admin Dashboard</title>
 </head>
 <body>
     <div class="nav">
         <div class="dashboard_name"><img class = "logo" src=img/help_desk.png></div>
-        <div class="home"><span class="material-icons-outlined" style ="color: #4d79ff;">home</span>Home</div>
-        <div class="users"><span class="material-icons-outlined" style ="color: black;">person</span>Users</div>
-        <div class="groups"><span class="material-icons-outlined" style ="color: #cc99ff">group</span>Groups</div>
-        <div class="billing"><span class="material-icons-outlined" style ="color: #b8b894">receipt_long</span>Billing</div>
-        <div class="settings"><span class="material-icons-outlined" style ="color: #66ffcc">settings</span>Settings</div>
-        <div class="support"><span class="material-icons-outlined" style ="color: #ff9999">support_agent</span>Support</div>
-        <div class="health"><span class="material-icons-outlined" style ="color: #33cc33">health_and_safety</span>Health</div>
+        <div class="home"><span class="material-icons-outlined" style ="color: #4d79ff;">home</span><a href="#">Home</a></div>
+        <div class="users"><span class="material-icons-outlined" style ="color: black;">person</span><a href="#">Users</a></div>
+        <div class="groups"><span class="material-icons-outlined" style ="color: #cc99ff">group</span><a href="#">Groups</a></div>
+        <div class="billing"><span class="material-icons-outlined" style ="color: #b8b894">receipt_long</span><a href="#">Billing</a></div>
+        <div class="settings"><span class="material-icons-outlined" style ="color: #66ffcc">settings</span><a href="#">Settings</a></div>
+        <div class="support"><span class="material-icons-outlined" style ="color: #ff9999">support_agent</span><a href="#">Support</a></div>
+        <div class="health"><span class="material-icons-outlined" style ="color: #33cc33">health_and_safety</span><a href="#">Health</a></div>
     </div>
 
     <div class="header">
-        <div class="searchProfile"></div>
-        <div class="user_profile">Daniel Lackey</div>
-        <div class="greeting">Welcome _</div>
+        <div class="user_profile">
+            <form class="searchBar">
+                <input type ="text" placeholder= "Search...">
+                <button type="submit" class="search"><div class="health"><span class="material-icons md-18">search</button>
+            </form>
+            <div class="profile">
+                <img class ="flag" src="img/flag.jpg">
+                <div class="language">English</div>
+                <div class="settings"><span class="material-icons-outlined" style ="color: #8c8c8c">settings</span></div>
+                <img class = profilePic src=img/profile_pic.jpg>Daniel Lackey</div>
+            </div>
+            <div class="greeting">Dashboard</div>
     </div>
 
     <div class="body_container">
-        <div class="usersOnline">User status</div>
-        <div class="userManagement">User Management</div>
-        <div class="tickets">Ticket status</div>
-        <div class="adminCenter">All Admin Centers</div>
-        <div class="domainManagement">Domain Management</div>
-        <div class="serverHealth">Server Health</div>
+        <div class="usersOnline">User status
+            <div class="user_container"
+            <ul>
+                <li></span><a class = "onlineUsers" href="#">50 Users Online</a></li>
+                <li></span><a class = "guestUsers" href="#">20 Guests Online</a></li>
+                <li></span><a class = "totalUsers" href="#">100 Total Users</a></li>
+            </ul>
+            <img class = "userData" src="img/userData.png">
+        </div>
+        </div>
+        <div class="userManagement">User Management
+            <ul>
+                <li><span class="material-icons-outlined">add</span><a href="#"><span> </span>Add a user</a></li>
+                <li><span class="material-icons-outlined">edit</span><a href="#"><span> </span>Edit a user</a></li>
+                <li><span class="material-icons-outlined">lock</span><a href="#"><span> </span>Reset a password</a></li>
+            </ul>
+        </div>
+        <div class="tickets">Ticket status
+            <ul>
+                <li id="p1"></li>
+                <li id="p2"></li>
+                <li id="p3"></li>
+                <li id="closedTickets"></li>
+                <li id="topCloser"></li>
+                <li><a href="#">View All Tickets</a></li>
+            </ul>
+        </div>
+        <div class="adminCenter">All Admin Centers
+            <ul>
+                <li><img class="adminSymbols" src="img/365.png"><a href="#"> Microsoft 365</a></li>
+                <li><img class="adminSymbols" src="img/AD.png"><a href="#"> Azure Active Directory</a></li>
+                <li><img class="adminSymbols" src="img/exchange.png"><a href="#"> Exchange</a></li>
+                <li><img class="adminSymbols" src="img/sp.png"><a href="#"> SharePoint</a></li>
+                <li><img class="adminSymbols" src="img/teams.png"><a href="#"> Teams</a></li>
+            </ul>
+        </div>
+        <div class="domainManagement">Domain Management
+            <ul>
+                <li><span class="material-icons-outlined">domain_add</span><a href="#"><span> </span>Add domain</a></li>
+                <li><span class="material-icons-outlined">settings_suggest</span><a href="#"><span> </span>Modify domain</a></li>
+                <li><span class="material-icons-outlined">domain</span><a href="#"><span> </span>View all domains</a></li>
+                <li><span class="material-icons-outlined">dns</span><a href="#"><span> </span>Manage DNS</a></li>
+            </ul>
+        </div>
+        <div class="serverHealth">Server Health
+            <ul>
+                <li><span class="material-icons-outlined">upgrade</span><a id = "patching" href="#"></a></li>
+                <li><span class="material-icons-outlined">wifi</span><a id = "serversOnline" href="#"></a></li>
+                <li><span class="material-icons-outlined">wifi_off</span><a id = "serversOffline" href="#"></a></li>
+            </ul>
+        </div>
     </div>
+    <script src = "main.js"></script>
 </body>
 </html>
